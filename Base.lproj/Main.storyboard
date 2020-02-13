@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minhas_Anotac_o_es" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo" highlightedImage="fundo" translatesAutoresizingMaskIntoConstraints="NO" id="lNN-iQ-PzS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OFw-dc-93c">
+                                <rect key="frame" x="27" y="208" width="321" height="251"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="251" id="Ab4-Fm-1GG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcf-tW-o2W">
+                                <rect key="frame" x="140" y="508" width="95" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <state key="normal" title="Limpar notas">
+                                    <color key="titleColor" red="1" green="0.98625379800000001" blue="0.76970380540000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cleanNotes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ExZ-eS-Ddu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nx-52-zfs">
+                                <rect key="frame" x="27" y="488" width="321" height="38"/>
+                                <state key="normal" image="botao_salvar"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLw-RZ-nVS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OFw-dc-93c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Ow-Gj-DGK"/>
+                            <constraint firstItem="2Nx-52-zfs" firstAttribute="top" secondItem="OFw-dc-93c" secondAttribute="bottom" constant="8" id="7EX-13-G9g"/>
+                            <constraint firstItem="lNN-iQ-PzS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A5l-1h-6KK"/>
+                            <constraint firstItem="lNN-iQ-PzS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BIv-mK-PwQ"/>
+                            <constraint firstItem="OFw-dc-93c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="CMy-xJ-bK9"/>
+                            <constraint firstItem="2Nx-52-zfs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="Cx4-kn-2Qb"/>
+                            <constraint firstItem="2Nx-52-zfs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OVV-iz-KGU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Nx-52-zfs" secondAttribute="trailing" constant="27" id="PSr-Dn-NKL"/>
+                            <constraint firstItem="OFw-dc-93c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VbH-Fm-Qgk"/>
+                            <constraint firstItem="lNN-iQ-PzS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YWP-Y7-vYV"/>
+                            <constraint firstItem="lNN-iQ-PzS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cjv-Q3-tc8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OFw-dc-93c" secondAttribute="trailing" constant="27" id="dQy-bs-Z1x"/>
+                            <constraint firstItem="dcf-tW-o2W" firstAttribute="top" secondItem="2Nx-52-zfs" secondAttribute="bottom" constant="3" id="kXp-am-Xbe"/>
+                            <constraint firstItem="dcf-tW-o2W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nRH-TZ-ehF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="notesText" destination="OFw-dc-93c" id="G9b-uT-Hxc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="botao_salvar" width="321" height="38"/>
+        <image name="fundo" width="768" height="462"/>
+    </resources>
+</document>
